@@ -1,0 +1,1 @@
+export 'package:er_app/widgets/card_img.dart';

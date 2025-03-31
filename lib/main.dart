@@ -1,4 +1,5 @@
-import 'package:er_app/screens/home_screen.dart';
+import 'package:er_app/router/routes.dart';
+import 'package:er_app/themes/themes_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,8 +13,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      
-      home: HomeScreen()
-    );
+      routes:AppRoutes.routes,
+      initialRoute: '/home',
+      theme: ThemesApp.darktheme
+      );
+
   }
 }
