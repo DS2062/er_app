@@ -88,7 +88,6 @@ Future<void> baseDirectory() async {
                   String filePath = filteredFiles[index];
                   String filename = path.basename(filePath);
                   return Card(
-                    color: Colors.white,
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     elevation: 4,
                     shape: RoundedRectangleBorder(

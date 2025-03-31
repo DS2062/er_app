@@ -17,7 +17,7 @@ class ThemesApp {
     ),
     cardTheme: CardThemeData
     (
-      shadowColor: Colors.white60
+      shadowColor: Colors.white60, 
     ),
   );
 
