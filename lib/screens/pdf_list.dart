@@ -12,7 +12,9 @@ class PdfViewerScreen extends StatefulWidget {
 }
 
 class _PdfViewerScreenState extends State<PdfViewerScreen> {
-  @override
+  int totalPages = 0;
+  int currentPage = 0;
+  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -24,12 +26,12 @@ class _PdfViewerScreenState extends State<PdfViewerScreen> {
         autoSpacing: false,
         onRender: (pages) {
           setState(() {
-            var totalPages = pages!;
+            totalPages = pages!;
           });
         },
         onPageChanged: (page, total) {
           setState(() {
-            var currentPage = page!;
+            currentPage = page!;
           });
         },
       ),

@@ -73,15 +73,15 @@ Future<void> baseDirectory() async {
                 .toList();
       });
     }
-  }
-//* ######################################  ZONA UTIL ############################################################################
+  }//? deje la logica de esto aqui porque al moverla no me funcionaba y no vi que hacia mal
+//* ######################################  ZONA DE PANTALLA ############################################################################
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Biblioteca", style: TextStyle(fontSize: 25))),
       body:
           filteredFiles.isEmpty
-              ? Center(child: CircularProgressIndicator())
+              ? Center(child: CircularProgressIndicator(color: Colors.amber[400],))
               : ListView.builder(
                 itemCount: filteredFiles.length,
                 itemBuilder: (context, index) {
@@ -120,7 +120,8 @@ Future<void> baseDirectory() async {
                   ); 
                 },
               ), 
-          floatingActionButton: FloatingActionButton(onPressed: (){baseDirectory();}, child:Icon(Icons.refresh)),
+          floatingActionButton: FloatingActionButton(onPressed: (){baseDirectory();},child:Icon(Icons.refresh,), ),
+          //*recarga la lista por si se a;ade un pdf durante ejecucion
     );
   }
 }
